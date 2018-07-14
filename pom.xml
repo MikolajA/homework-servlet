@@ -76,6 +76,24 @@
               <artifactId>maven-jar-plugin</artifactId>
               <version>3.1.0</version>
           </plugin>
+
+          <plugin>
+              <groupId>org.wildfly.plugins</groupId>
+              <artifactId>wildfly-maven-plugin</artifactId>
+              <version>1.2.1.Final</version>
+              <configuration>
+                  <name>zadaniedomowe.war</name>
+              </configuration>
+              <executions>
+                  <execution>
+                      <phase>install</phase>
+                      <goals>
+                          <goal>deploy</goal>
+                      </goals>
+                  </execution>
+              </executions>
+          </plugin>
+
       </plugins>
     </pluginManagement>
   </build>
